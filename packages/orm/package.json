@@ -3,7 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "generate": "drizzle-kit generate:sqlite"
+    "generate": "drizzle-kit generate:sqlite",
+    "studio":  "bun run src/studio.ts"
   },
   "devDependencies": {
     "better-sqlite3": "^9.0.0",
