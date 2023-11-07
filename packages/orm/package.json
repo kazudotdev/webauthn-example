@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "generate": "drizzle-kit generate:sqlite",
+    "migrate": "bun run src/migration.ts",
     "studio":  "bun run src/studio.ts"
   },
   "devDependencies": {
