@@ -14,8 +14,8 @@ export const credentials = sqliteTable("credentials", {
     .notNull()
     .references(() => users.id, { onDelete: "cascade" }),
   counter: integer("counter").default(0),
-  publicKey: blob("publickey", { mode: "buffer" }).notNull(),
-  externalId: text("externalId", { mode: "text" }).notNull(),
+  publicKey: blob("public_key", { mode: "buffer" }).notNull(),
+  externalId: text("external_id", { mode: "text" }).notNull(),
 });
 
 export const sessions = sqliteTable("sessions", {

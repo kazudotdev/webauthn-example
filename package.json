@@ -3,6 +3,11 @@
   "private": true,
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "generate": "bun --cwd packages/orm generate",
+    "migrate": "bun --cwd packages/orm migrate",
+    "studio": "bun --cwd packages/orm studio"
+  },
   "workspaces": [
     "packages/*"
   ],
