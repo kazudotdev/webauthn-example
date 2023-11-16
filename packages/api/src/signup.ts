@@ -1,18 +1,15 @@
 import { Hono } from "hono";
-import { db } from "@webauthn/orm";
-import config from "./config";
+import { logger } from "hono/middleware";
+
 const signup = new Hono();
 
-signup.post("/webauthn", async (c) => {
-  const { email } = await c.req.json<{ email: string }>();
-  // find by email and userid
-  // 未登録の場合は登録処理へ、
-  // 登録済みであればエラー
+signup.use("*", logger());
+signup.post("/webauthn", (c) => {
   return c.text("webauthn");
 });
 
 signup.post("/webauthn/verify", (c) => {
-  return c.text("webauthn/verify");
+  return c.text("webauthn");
 });
 
 export default signup;

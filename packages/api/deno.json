@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "lock": true,
+  "imports": {
+    "hono": "https://deno.land/x/hono@v3.10.1/mod.ts",
+    "hono/middleware": "https://deno.land/x/hono@v3.10.1/middleware.ts",
+    "$std/": "https://deno.land/std@0.206.0/"
+  },
+  "importMap": "./vendor/import_map.json"
+}
