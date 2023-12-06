@@ -1,14 +1,15 @@
 {
   "tasks": {
-    "dev": "deno run --unstable --allow-net --allow-read --allow-write --watch main.ts"
+    "dev": "deno run --unstable --allow-net --allow-read --allow-write --watch src/index.ts"
   },
   "lock": true,
   "imports": {
     "hono": "https://deno.land/x/hono@v3.10.1/mod.ts",
     "hono/middleware": "https://deno.land/x/hono@v3.10.1/middleware.ts",
     "hono/cookie": "https://deno.land/x/hono@v3.10.1/helper/cookie/index.ts",
-    "simplewebauthn/server": "https://deno.land/x/simplewebauthn@v8.3.5/deno/server.ts",
-    "simplewebauthn/typescript-types": "https://deno.land/x/simplewebauthn@v8.3.5/deno/typescript-types.ts",
+    "@simplewebauthn/server": "https://raw.githubusercontent.com/kazudotdev/SimpleWebAuthn/master/deno/server.ts",
+    "@simplewebauthn/helper": "https://raw.githubusercontent.com/kazudotdev/SimpleWebAuthn/master/deno/server/helpers.ts",
+    "@simplewebauthn/typescript-types": "https://raw.githubusercontent.com/kazudotdev/SimpleWebAuthn/master/deno/typescript-types.ts",
     "$std/": "https://deno.land/std@0.206.0/"
   },
   "importMap": "./vendor/import_map.json"
